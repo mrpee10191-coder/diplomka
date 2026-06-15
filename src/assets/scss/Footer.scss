@@ -1,0 +1,114 @@
+@use './mixin.scss'as *;
+@use './variables.scss'as *;
+
+.footer {
+    margin-top: 52px;
+    background: var(--foot);
+    border-radius: 40px 40px 0 0;
+
+    &__nav {
+        &-div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 129px;
+            padding-bottom: 71px;
+            gap: 20px;
+            @include media(1200) {
+                justify-content: space-between;
+            }
+            @include media(1000) {
+                flex-direction: column;
+            }
+        }
+
+        &-developer {
+            color: rgba(255, 255, 255, 0.911);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+
+        &-developer p {
+            border-bottom: 1px rgba(255, 255, 255, 0.911) solid;
+        }
+    }
+}
+
+.footer__left {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+
+    &-title {
+        max-width: 474px;
+        width: 100%;
+        font-family: $FontPoppins;
+        font-size: clamp(3.5rem, 2.763rem + 3.14vw, 5.75rem);
+        font-weight: 500;
+        color: white;
+        margin: 0;
+        line-height: 1;
+    }
+
+    &-title span {
+        display: block;
+        line-height: 1;
+    }
+
+    &-desc {
+        font-family: $FontPoppins;
+        font-size: clamp(1.25rem, 1.086rem + 0.7vw, 1.75rem);
+        font-weight: 400;
+        color: white;
+    }
+
+    &-email a {
+        text-decoration: none;
+        font-family: $FontPoppins;
+        font-size: clamp(1.25rem, 1.086rem + 0.7vw, 1.75rem);
+        font-weight: 400;
+        color: white;
+
+        position: relative;
+        display: inline-block;
+        border-bottom: 3px white solid;
+        padding-bottom: 2px;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 7px;
+            width: 100%;
+            height: 2px;
+            background: white;
+
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+    }
+
+    &-media {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+.footer__right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 474px;
+    height: 452px;
+    @include media(700) {
+        display: none;
+    }
+}

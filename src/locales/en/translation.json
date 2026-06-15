@@ -1,0 +1,42 @@
+{
+    "nav": {
+        "projects": "Projects",
+        "about": "About me",
+        "contacts": "Contacts"
+    },
+    "about": {
+        "myName": "Hi, my name is Firdavs 🤙",
+        "develop": "I develop",
+        "ideas": "ideas",
+        "and": "and",
+        "helpBuild": "help build a better",
+        "worldThrough": "world through",
+        "software": "software.",
+        "contact": "Contact",
+        "downloadCv": "Download CV"
+    },
+
+    "projects": {
+        "last": "Last",
+        "projects": "Projects",
+        "shoppingCart": "Shopping cart",
+        "github": "GitHub",
+        "deploy": "Deploy",
+        "more": "More"
+    },
+
+    "skills": {
+        "about": "About",
+        "me": "me",
+        "description1": "I'm 16 years old web developer. Finished 9 grades and entered Polytechnic College. This is my first step toward getting real work experience.",
+        "description2": "Now I'm developing fullstack applications and websites.",
+        "skills": "Skills"
+    },
+
+    "footer": {
+        "needed": "Needed in",
+        "projects": "projects?",
+        "together": "Let's do it together!",
+        "developedBy": "Developed by Firdavs Shaxidov"
+    }
+}

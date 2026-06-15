@@ -1,0 +1,25 @@
+$Nunito: ("Regular", 400),
+("SemiBold", 600);
+
+@each $name,
+$weight in $Nunito {
+    @font-face {
+        font-family: "Nunito";
+        src: url(../fonts/Nunito-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}
+
+$Poppins: ("Light", 300),
+("Regular", 400),
+("Medium", 500);
+;
+
+@each $name,
+$weight in $Poppins {
+    @font-face {
+        font-family: "Poppins";
+        src: url(../fonts/Poppins-#{$name}.ttf);
+        font-weight: $weight;
+    }
+}

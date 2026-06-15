@@ -1,0 +1,47 @@
+@use './mixin.scss'as *;
+@use './variables.scss'as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+.container {
+    max-width: 1130px;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+body {
+    min-width: 375px;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.moo {
+    width: 45px;
+    height: 45px;
+    background: white;
+}
+.su{
+    width: 45px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.879);
+}

@@ -1,0 +1,66 @@
+$FontNunito: "Nunito",
+sans-serif;
+$FontPoppins: "Poppins",
+sans-serif;
+$grey: rgb(122, 119, 119);
+$yellow: #F59E0B;
+$blue: #38BDF8;
+$react: #0EA5E9;
+$java: #FDE68A;
+$node: #22C55E;
+$api: #A855F7;
+$green: #34D399;
+$black: #111827;
+
+:root {
+  --bg: white;
+  --text: rgba(0, 0, 0, 0.879);
+  --desc: #111827;
+  --foot: #111827;
+  --first: #F59E0B;
+  --second: #38BDF8;
+  --third: #34D399;
+}
+
+body.dark {
+  --bg: rgba(0, 0, 0, 0.879);
+  --text: white;
+  --desc: white;
+  --foot: rgb(41, 27, 51);
+  --first: black;
+  --second: black;
+  --third: black;
+
+
+  .burger span {
+    background: white;
+  }
+
+  .about__nav {
+    background: linear-gradient(90deg,
+        #232526 0%,
+        #414345 100%);
+  }
+
+  .sp {
+    color: white;
+    background: none;
+  }
+
+  .about__btns {
+    &-contact {
+      background: white;
+      color: black;
+    }
+
+    &-download {
+      &_desc {
+        color: white;
+      }
+    }
+
+    &-download::after {
+      background: white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+    "nav": {
+        "projects": "Loyihalar",
+        "about": "Men haqimda",
+        "contacts": "Aloqa"
+    },
+    "about": {
+        "myName": "Salom, mening ismim Firdavs 🤙",
+        "develop": "Men",
+        "ideas": "g'oyalarni",
+        "and": "va",
+        "helpBuild": "yaxshiroq dunyo",
+        "worldThrough": "yaratishga yordam beraman",
+        "software": "dasturiy ta'minot orqali.",
+        "contact": "Bog'lanish",
+        "downloadCv": "CV yuklab olish"
+    },
+
+    "projects": {
+        "last": "So'nggi",
+        "projects": "loyihalar",
+        "shoppingCart": "Savat",
+        "github": "GitHub",
+        "deploy": "Sayt",
+        "more": "Ko'proq"
+    },
+
+    "skills": {
+        "about": "Men",
+        "me": "haqimda",
+        "description1": "Men 16 yoshli veb dasturchiman. 9-sinfni tugatib, Politexnika kollejiga o'qishga kirdim. Bu mening birinchi ish tajribam sari qo'ygan qadamim.",
+        "description2": "Hozirda fullstack ilovalar va veb-saytlar ishlab chiqmoqdaman.",
+        "skills": "Ko'nikmalar"
+    },
+
+    "footer": {
+        "needed": "Loyihangiz uchun",
+        "projects": "dasturchi kerakmi?",
+        "together": "Keling, birgalikda ishlaymiz!",
+        "developedBy": "Firdavs Shaxidov tomonidan ishlab chiqilgan"
+    }
+}

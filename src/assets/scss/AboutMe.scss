@@ -1,0 +1,137 @@
+@use './mixin.scss'as *;
+@use './variables.scss'as *;
+
+.sp {
+    position: relative;
+    color: #1FA5FF;
+    background:
+        url(../img/line.png);
+    background-repeat: no-repeat;
+    background-position: 0 calc(100% - 15px);
+    background-size: 100%;
+    @include media(1000) {
+         background-position: 0 calc(100% - 10px);
+    }
+    @include media(700) {
+         background-position: 0 calc(100% - 5px);
+    }
+}
+.dev{display: flex; gap: 10px;}
+.also {
+    @include media(10000) {
+        display: none;
+    }
+    @include media(700) {
+        display: flex;
+    }
+}
+.and {
+    @include media(10000) {
+        display: flex;
+    }
+    @include media(700) {
+        display: none;
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__nav {
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 66px 38px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(90deg,
+                #FBED96 0%,
+                #ABECD6 100%,
+            );
+        border: none;
+        border-radius: 40px;
+    }
+}
+
+.about__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-title {
+        font-family: $FontNunito;
+        @include text($black, 600);
+        font-size: clamp(1.375rem, 0.917rem + 1.96vw, 2.75rem);
+        margin-bottom: 8px;
+        margin-top: 25px;
+        white-space: nowrap;
+    }
+
+    &-desc {
+        display: flex;
+        flex-direction: column;
+        font-family: $FontPoppins;
+        @include text($black, 500);
+        @include flex();
+        font-size: clamp(2rem, 1.417rem + 2.49vw, 3.75rem);
+        max-width: 895px;
+        width: 100%;
+        margin-bottom: 42px;
+    }
+}
+
+.about__btns {
+    @include flexBetween();
+    gap: 16px;
+    
+    &-contact {
+        font-family: $FontPoppins;
+        @include text(20px, white, 500);
+        border: none;
+        border-radius: 55px;
+        background: $black;
+        color: white;
+        padding: 8px 26px;
+        transition: 0.2s ease;
+    }
+
+    &-download {
+        transition: 0.2s ease;
+        @include flexBetween();
+        gap: 8px;
+        position: relative;
+        text-decoration: none;
+
+        &_desc {
+            display: flex;
+            white-space: nowrap;
+            color: $black;
+            font-family: $FontPoppins;
+            @include text(18px, $black, 500);
+        }
+    }
+
+    &-download::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 3px;
+        background: black;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.1s ease;
+    }
+
+    &-download:hover::after {
+        transform: scaleX(1);
+    }
+}
+
+.about__img-white {
+    display: none;
+}

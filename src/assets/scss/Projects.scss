@@ -1,0 +1,211 @@
+@use './mixin.scss'as *;
+@use './variables.scss'as *;
+
+
+.projects {
+    margin-top: 189px;
+    margin-bottom: 125px;
+}
+
+.projects__title {
+    &-desc {
+        font-family: $FontPoppins;
+        font-weight: 500;
+        font-size: clamp(3.5rem, 2.75rem + 3.2vw, 5.75rem);
+        margin: 0;
+        line-height: 1;
+    }
+
+    &-desc span {
+        display: block;
+        line-height: 1;
+    }
+}
+
+
+.projects__btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 77px;
+    @include media(700) {
+        justify-content: center;
+    }
+    @include media(600) {
+        justify-content: flex-end
+    }
+}
+
+.projects__examples {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    margin-top: 77px;
+
+    @include media(1000) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    @include media(700) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &-try {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 400px;
+        width: 100%;
+
+        @include media(1000) {
+                max-width: 400px;
+                width: 100%;
+        }
+        @include media(700) {
+                max-width: 660px;
+                width: 100%;
+        }
+
+        &_title {
+            font-family: $FontPoppins;
+            font-size: clamp(2rem, 1.875rem + 0.53vw, 2.375rem);
+            font-weight: 500;
+        }
+
+        &_lang {
+            display: flex;
+            gap: 10px;
+
+            &-uses {
+                background: $react;
+                border-radius: 75px;
+                font-family: $FontPoppins;
+                @include text(16px, white, 300);
+                padding: 8px 16px;
+            }
+        }
+        
+        &_img img {
+            max-width: 400px;
+            width: 100%;
+            @include media(1000) {
+                max-width: 430px;
+                width: 100%;
+                display: block;
+                object-fit: cover;
+            }
+            @include media(700) {
+                max-width: 630px;
+                width: 100%;
+                display: flex;
+            }
+        }
+
+
+        &_deploy {
+            display: flex;
+            gap: 23px;
+            align-items: center;
+            margin-left: 10px;
+
+            a {
+                font-family: $FontPoppins;
+                @include text(16px, var(--desc), 400);
+
+                position: relative;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -6px;
+                    width: 100%;
+                    height: 3px;
+                    background: var(--desc);
+
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.2s ease;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                }
+            }
+
+            .icon-default,
+            .icon-hover {
+                width: 25px;
+                height: 25px;
+                margin-left: 5px;
+                transition: 0.3s ease;
+            }
+
+            .icon-hover {
+                display: none;
+            }
+
+            a:hover .icon-default {
+                display: none;
+            }
+
+            a:hover .icon-hover {
+                display: inline-block;
+            }
+        }
+    }
+
+}
+
+.javascript {
+    background: $java;
+    color: $black;
+}
+
+.node {
+    background: $node;
+}
+
+.api {
+    background: $api;
+}
+
+.third {
+    @include media(600) {
+        display: none;
+    }
+}
+
+.btn_left {
+    @include media(10000) {
+        display: flex;
+    }
+    @include media(600) {
+        display: none;
+    }
+}
+
+.more {
+    font-family: $FontPoppins;
+    @include text(16px, $black, 500);
+    @include media(10000) {
+        display: none;  
+    }
+    @include media(600) {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+.icon-white {
+    display: none;
+}
