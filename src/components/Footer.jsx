@@ -29,8 +29,19 @@ const Footer = () => {
                         </div>
 
                         <div className="footer__left-media">
-                            <img src={twitter} alt="" />
-                            <img src={ins} alt="" />
+                            <a
+                                href="https://x.com/firdavs2906"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img src={twitter} alt="" />
+                            </a>
+
+                            <a
+                                href="https://www.linkedin.com/in/mr-pee-421aab416/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <img src={ins} alt="" />
+                            </a>
                         </div>
 
                     </div>

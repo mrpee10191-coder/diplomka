@@ -22,7 +22,8 @@
         "shoppingCart": "Shopping cart",
         "github": "GitHub",
         "deploy": "Deploy",
-        "more": "More"
+        "more": "More",
+        "hide": "Hide"
     },
 
     "skills": {

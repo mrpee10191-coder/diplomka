@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from "react";
 import { Port } from "../context/Port";
 import { useTranslation } from "react-i18next";
-import { moo, russia, su, usa, uzb } from "../utils/img";
+import { moo, russia, su, sun, usa, uzb } from "../utils/img";
 
 
 const Navbar = () => {
@@ -59,7 +59,36 @@ const Navbar = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        burgerRef.current &&
+        !burgerRef.current.contains(event.target)
+      ) {
+        setOpenBurger(false);
+      }
 
+      if (
+        langRef.current &&
+        !langRef.current.contains(event.target)
+      ) {
+        setIsLanguageOpen(false);
+      }
+    };
+
+    const handleScroll = () => {
+      setOpenBurger(false);
+      setIsLanguageOpen(false);
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header className="header">
@@ -96,7 +125,7 @@ const Navbar = () => {
           <button onClick={toggleTheme} className="theme">
             {theme === "light"
               ? <img src={moo} alt="" className="moo" />
-              : <img src={su} alt="" className="su" />}
+              : <img src={sun} alt="" className="su" />}
           </button>
         </div>
 

@@ -22,7 +22,9 @@ const AboutMe = () => {
           </div>
         </div>
         <div className="about__btns">
-          <button className='about__btns-contact' >{t("about.contact")}</button>
+          <button className='about__btns-contact' >
+            <a href="#footer">{t("about.contact")}</a>
+          </button>
           <div className="about__btns-download">
             <a href="/cv.pdf" download='Firdavs_CV.pdf' className='about__btns-download_desc'>{t("about.downloadCv")}</a>
             <img src={theme === "light" ? arrow : arrow10} alt="" className='about__img-black' />

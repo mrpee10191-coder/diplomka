@@ -22,7 +22,8 @@
         "shoppingCart": "Корзина покупок",
         "github": "GitHub",
         "deploy": "Сайт",
-        "more": "Ещё"
+        "more": "Ещё",
+        "hide": "Скрыть"
     },
 
     "skills": {

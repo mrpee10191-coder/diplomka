@@ -1,6 +1,10 @@
 @use './mixin.scss'as *;
 @use './variables.scss'as *;
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +13,6 @@
     list-style: none;
     border: none;
     outline: none;
-}
-
-button:hover {
-    opacity: 0.6;
 }
 
 .container {

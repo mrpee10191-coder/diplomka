@@ -86,8 +86,10 @@
 .about__btns {
     @include flexBetween();
     gap: 16px;
-    
     &-contact {
+        background: none;
+    }
+    &-contact a{
         font-family: $FontPoppins;
         @include text(20px, white, 500);
         border: none;
